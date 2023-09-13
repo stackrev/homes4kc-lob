@@ -2,7 +2,10 @@
 <head>
 <meta charset="UTF-8">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
-<title>Lob.com Sample 6x9 Postcard Front</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;900&family=Poppins&display=swap" rel="stylesheet">
+<title>4x6 Postcard Front</title>
 <style>
   *, *:before, *:after {
     -webkit-box-sizing: border-box;
@@ -11,32 +14,110 @@
   }
 
   body {
-    width: 9.25in;
-    height: 6.25in;
+    width: 6.25in;
+    height: 4.25in;
     margin: 0;
     padding: 0;
     /* If using an image, the background image should have dimensions of 2775x1875 pixels. */
-    background-image: url(https://s3-us-west-2.amazonaws.com/public.lob.com/assets/desert.jpg);
-    background-size: 9.25in 6.25in;
+    background-color: #FFD81E;
+    background-size: 6.25in 4.25in;
     background-repeat: no-repeat;
+
   }
 
   #safe-area {
     position: absolute;
-    width: 8.875in;
-    height: 5.875in;
+    width: 5.875in;
+    height: 3.875in;
     left: 0.1875in;
     top: 0.1875in;
-    background-color: rgba(255,255,255,0.5);
+    /* border: 1px solid black; */
   }
 
-  .text {
-    margin: 10px;
-    font-family: 'Open Sans';
-    font-weight: 400;
-    font-size: 40px;
-    color: white;
-    text-shadow: 2px 2px black;
+  .main-text {
+    position:absolute;
+    left:0.2in;
+    top:0.3in;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+    color: black;
+  }
+
+  .list-check{
+    position:absolute;
+    left:0.2in;
+    top:1.2in;
+  }
+  .list-text {
+    position:absolute;
+    left:0.5in;
+    top:1.2in;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #372403;
+    line-height: 24px;
+  }
+  .green-check{
+    width: 0.35in;
+    height: 0.25in;
+    background-image: url('https://lobmarketing.s3.us-west-1.amazonaws.com/green-check-mark.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .address-text {
+    position:absolute;
+    left: 1in;
+    bottom: 0.6in;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: black;
+  }
+  .contact-text {
+    position:absolute;
+    left: 0.5in;
+    bottom : 0.2in;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 28px;
+    color: black;
+  }
+  .logo{
+    position: absolute;
+    right: 0.2in;
+    top:0.15in;
+    width: 1.8in;
+    height: 0.6in;
+    background-image: url('https://lobmarketing.s3.us-west-1.amazonaws.com/greenstreet-logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  /* .logo-text {
+    position:absolute;
+    right: 0.2in;
+    top: 0.2in;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 26px;
+    color: black;
+    line-height: 1;
+    text-align: center;
+  } */
+  .user-text {
+    position:absolute;
+    right: 0.3in;
+    top: 0.8in;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    color: #685408;
+  }
+  img{
+    position:absolute;
+    right: 0.2in;
+    top: 1in
   }
 </style>
 </head>
@@ -44,9 +125,41 @@
 <body>
   <div id="safe-area">
     <!-- All text should appear within the safe area. -->
-    <div class="text">
-      The frosted white box is the safe area. Do not put text outside this box.
+    <div class="main-text">
+      We Want To Buy <br/>Your House!
     </div>
+    
+    <div class="list-check">
+      <div class='green-check'></div>
+      <div class='green-check'></div>
+      <div class='green-check'></div>
+      <div class='green-check'></div>
+      <div class='green-check'></div>
+      <div class='green-check'></div>
+    </div>
+    <div class="list-text">
+      Fast Cash Offer<br />
+      No Repairs Needed<br />
+      No Commissions<br />
+      No Closing Costs<br />
+      Hassle-Free-Sale<br />
+      Hablamos Espanol
+    </div>
+    <div class="address-text">
+      555 S. Mangum St, Durham, NC, 27701
+    </div>
+    <div class="contact-text">
+      Please Call or Text<span style='color:#F51D0D'> 919-926-1791</span>
+    </div>    
+    <div class="logo"></div>
+    <!-- <div class="logo-text">
+      GREENSTREET<br />REAL ESTATE
+    </div> -->
+    <div class="user-text">
+      NC's Trusted Home Buyer
+    </div>
+    <img class="streetview" width="270" height="180" src="https://maps.googleapis.com/maps/api/streetview?size=600x480&key=AIzaSyCTRkkUw3LzUY7-weEYab3yYIU6gRDvrtw&return_error_code=true&location=8134+w+78th+st+overland+park+ks+66204&fov=70" onerror="this.style.display='none'"/>
+
   </div>
 </body>
 

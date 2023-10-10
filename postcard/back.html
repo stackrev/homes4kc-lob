@@ -86,6 +86,15 @@
     1.5px -1.5px 0 red;
   }
   
+  #qr-code {
+      position: absolute;
+      left: 0.3in;
+      top: 1.5in;
+      width: 105;
+      height: 105;
+      background-color: black;
+    }
+
   .red-arrow{
     position: absolute;
     left: 1.5in;
@@ -152,7 +161,8 @@
     </div>
     <div class="get-my-free">
       GET MY FREE<div class="shadow-text">CASH OFFER</div>
-    </div>
+    </div>    
+    <div id="qr-code"></div>
     <div class="red-arrow"></div>
     <div class="link-text">
       greenstreethomebuyers.com
@@ -170,5 +180,12 @@
   <!-- Do not place any artwork or text in the ink free area. Address and postage will be automatically printed here by Lob. -->
   <div id="ink-free"></div>
 </body>
-
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script type="text/javascript">
+  var qrcode = new QRCode(document.getElementById("qr-code"), {
+    text: "https://greenstreethomebuyers.com",
+    width: 105,
+    height: 105,
+  });
+</script>
 </html>

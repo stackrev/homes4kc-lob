@@ -92,7 +92,9 @@
       top: 1.5in;
       width: 105;
       height: 105;
-      background-color: black;
+      background-image: url(' https://lobmarketing.s3.us-west-1.amazonaws.com/QR_Code-greenstreethomebuyers.com.png');
+      background-size: contain;
+      background-repeat: no-repeat;
     }
 
   .red-arrow{
@@ -181,11 +183,4 @@
   <div id="ink-free"></div>
 </body>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-<script type="text/javascript">
-  var qrcode = new QRCode(document.getElementById("qr-code"), {
-    text: "https://greenstreethomebuyers.com",
-    width: 105,
-    height: 105,
-  });
-</script>
 </html>
